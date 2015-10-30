@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework9.4</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,400italic,500,500italic,700,900,900italic,700italic,100italic' rel='stylesheet' type='text/css'>
+    
+</head>
+<body>
+    <form id="myForm" action="/echo" method="post" autocomplete="off">
+        <h2>feedback form</h2>
+        <hr>
+        <label>First Name<input autofocus id="txtFirstName" type="text" placeholder="First Name"></label><br>
+        <label>Last Name<input id="txtLastName" type="text" placeholder="Last Name"></label><br>            
+        <label>You<input type="radio" name="sex" value="man"> Man<input type="radio" name="sex" value="woman"> Woman<input type="radio" name="sex" value="shy"> I'm shy</label><br><br>
+        <label>Theme of message<br>
+            <select name="theme">
+                <option value="work">About work</option>
+                <option value="hobby">About hobby</option>
+                <option value="kids">About kids</option>
+                <option value="other">Other</option>
+            </select><br>
+        </label><br>      
+        <label>Message<textarea rows="2" name="message" placeholder="Message"></textarea></label><br>
+        <label>E-mail<input id="txtMail" type="email" placeholder="Mail"></label><br>
+        <label>Password<input id="txtPassword" type="password" placeholder="Password" maxlength="10"></label><br>       
+        <button class="but1" type="reset">Delete</button>
+        <button class="but2" type="submit">Submit</button>
+    </form>
+<script type="text/javascript">
+            var mySubmit = document.getElementById('myForm');
+            function func1(event) {
+                a = confirm('Are you sure?');
+                if (a) {
+                    return true;
+                }
+                    else {
+                    event.preventDefault();
+                } 
+            }
+            mySubmit.addEventListener("submit", func1);
+       </script>
+</body>
+</html>
